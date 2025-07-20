@@ -16,13 +16,43 @@
     <div class="filters">
       <input type="date" id="startDate" />
       <input type="date" id="endDate" />
+      <select id="mediaFilter">
+        <option value="all">All Content</option>
+        <option value="image">Images Only</option>
+        <option value="video">Videos Only</option>
+      </select>
       <button>Get Space Images</button>
+    </div>
+
+    <!-- Fun Space Facts Section -->
+    <div id="spaceFact" class="space-fact">
+      <div class="fact-header">
+        <span class="fact-icon">🌟</span>
+        <h3>Did You Know?</h3>
+        <button id="refreshFact" class="fact-refresh" title="Get another fact!">🔄</button>
+      </div>
+      <p id="factText" class="fact-text">Loading amazing space fact...</p>
     </div>
 
     <div id="gallery" class="gallery">
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
         <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
+      </div>
+    </div>
+
+    <!-- Modal for displaying larger images -->
+    <div id="imageModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="" />
+          <div class="modal-info">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDate" class="modal-date"></p>
+            <p id="modalExplanation" class="modal-explanation"></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
